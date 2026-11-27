@@ -5,6 +5,7 @@ def calculate_parking():
         "heavy vehicle": 100
     }
 
+    vehicle_number = input("Enter vehicle number: ").strip().upper()
     vehicle_type = input("Enter vehicle type (Two-wheeler / Four-wheeler / Heavy vehicle): ").strip().lower()
     
     if vehicle_type not in rates:
@@ -23,6 +24,7 @@ def calculate_parking():
     total_fee = rates[vehicle_type] * duration
 
     print("\n--- Parking Receipt ---")
+    print(f"Vehicle Number   : {vehicle_number}")
     print(f"Vehicle Type     : {vehicle_type.capitalize()}")
     print(f"Parking Duration : {duration} hours")
     print(f"Total Parking Fee: Rs. {total_fee:.2f}")
